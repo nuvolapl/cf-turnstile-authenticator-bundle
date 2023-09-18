@@ -1,0 +1,19 @@
+services:
+  _defaults:
+    autowire: false
+    autoconfigure: false
+
+  nuvola.http_client:
+    class: Symfony\Contracts\HttpClient\HttpClientInterface
+    factory: [ 'Symfony\Component\HttpClient\HttpClient', 'create' ]
+
+  Nuvola\CloudflareTurnstileAuthenticatorBundle\Service\SiteService:
+    - '@nuvola.http_client'
+    - ~ # compiled
+    - ~ # compiled
+
+  Nuvola\CloudflareTurnstileAuthenticatorBundle\Service\SiteServiceInterface: '@Nuvola\CloudflareTurnstileAuthenticatorBundle\Service\SiteService'
+
+  Nuvola\CloudflareTurnstileAuthenticatorBundle\Security\CloudflareTurnstileAuthenticator:
+    - '@Nuvola\CloudflareTurnstileAuthenticatorBundle\Service\SiteServiceInterface'
+    - '@Symfony\Contracts\EventDispatcher\EventDispatcherInterface'

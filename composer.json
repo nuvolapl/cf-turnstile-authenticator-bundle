@@ -1,0 +1,40 @@
+{
+  "name": "nuvolapl/cf-turnstile-authenticator-bundle",
+  "type": "library",
+  "license": "proprietary",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.2",
+    "ext-json": "*",
+    "symfony/config": "^6.3",
+    "symfony/dependency-injection": "^6.3",
+    "symfony/http-client": "^6.3",
+    "symfony/http-foundation": "^6.3",
+    "symfony/http-kernel": "^6.3",
+    "symfony/security-core": "^6.3",
+    "symfony/security-http": "^6.3",
+    "symfony/uid": "^6.3",
+    "symfony/yaml": "^6.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.3"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Nuvola\\CloudflareTurnstileAuthenticatorBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Nuvola\\CloudflareTurnstileAuthenticatorBundle\\Tests\\": "tests/"
+    }
+  }
+}
