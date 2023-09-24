@@ -7,7 +7,6 @@ namespace Nuvola\CloudflareTurnstileAuthenticatorBundle\DependencyInjection\Test
 use Nuvola\CloudflareTurnstileAuthenticatorBundle\DependencyInjection\Configuration;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
-use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class ConfigurationTest extends TestCase
 {

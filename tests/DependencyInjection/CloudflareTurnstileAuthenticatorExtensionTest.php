@@ -17,7 +17,7 @@ class CloudflareTurnstileAuthenticatorExtensionTest extends TestCase
         $extension = new CloudflareTurnstileAuthenticatorExtension();
 
         $mergedConfig = [
-            'endpoint' => 'http://turnstile.cloudflare.localhost/verify',
+            'endpoint'   => 'http://turnstile.cloudflare.localhost/verify',
             'secret_key' => 'secret-key',
         ];
 
